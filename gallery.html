@@ -9,87 +9,121 @@
 <body>
 
     <header>
-        <div>
-            <img src="./assets/Logo.png" alt="Book store logo" width="200" />
-            <div>
-                <a href="home.html">Home</a>
-                <a href="gallery.html">Gallery</a>
-                <a href="about.html">About us</a>
-                <a href="custom.html">Custom</a>
+        <div class="header">
+            <div class="logo">
+            <img class="logo-image"  src="./assets/Logo.png" alt="Book store logo" width="100" />
             </div>
-            <h1>
-                Book Haven Bookstore
+            <div class="links">
+                <a role="button" href="home.html">Home</a>
+                <div class="marker">You are currently on </div>
+                <a role="button" href="gallery.html">Gallery</a>
+                <a role="button" href="about.html">About us</a>
+                <a role="button" href="custom.html">Custom</a>
+            </div>
+            <h1 class="title">
+                Gallery
             </h1>
         </div>
     </header>
 
     <main>
-        <section>
-            <h2>Gallery</h2>
-            <div>
-            <div>
-                <img src="./assets/Client3_Book1.png" alt="product image"/>
-                <h3>Brie Mine 4Ever</h3>
-                <p>An essential guide to the delicious and diverse world of cheese for enthusiasts of all levels.</p>
-                <button>Add to cart</button>
-            </div>
-            <div>
-                <img src="./assets/Client3_Book2.png" alt="product image"/>
-                <h3>Glory Riders</h3>
-                <p>A book exploring the thrilling world of motorcycle culture, community, and the open road.</p>
-                <button>Add to cart</button>
-            </div>
-            <div>
-                <img src="./assets/Client3_Book3.png" alt="product image"/>
-                <h3>Sorcerer’s Shadowed Chronicles</h3>
-                <p>A tale of forbidden magic and ancient secrets that intertwine to determine the fate of a shadowed world.</p>
-                <button>Add to cart</button>
-            </div>
-            <div>
-                <img src="./assets/Client3_Magazine1.png" alt="product image"/>
-                <h3>Ballc</h3>
-                <p>A magazine about pickleball</p>
-                <button>Add to cart</button>
-            </div>
-            <div>
-                <img src="./assets/Client3_Magazine2.png" alt="product image"/>
-                <h3>Travel</h3>
-                <p>Your passport to adventure, inspiring journeys and exploring the world's wonders..</p>
-                <button>Add to cart</button>
-            </div>
-                <div>
-                    <img src="./assets/Client3_Magazine3.png" alt="product image"/>
-                    <h3>Eat</h3>
-                    <p>Your essential guide to the delicious world of food, from recipes and restaurants to culinary trends.</p>
-                    <button>Add to cart</button>
+        <section class="gallery-section">
+            <div id="modal" class="modal">
+                <div class="modal-body">
+                    <div class="modal-content">
+                        <div>
+                            <h2>Your cart</h2>
+                            </div>
+                            <ul id="cart"></ul>
+                            <div>
+                                <button onclick="clearCart()" >Clear Cart</button>
+                                <button onclick="processOrder()" >Process order</button>
+                            </div>
+                            </div>
+                        <div role="button" onclick="closeCart()">
+                            
+                                <img height="30" src="./assets/close.png" />
+                            
+                        </div>
                 </div>
             </div>
-        <button>View shopping cart</button>
+            <h2 class="gallery-h2">Choose a book from our selection</h2>
+            <div class="gallery">
+            <div class="book">
+                <img class="image-book" src="./assets/Client3_Book1.png" alt="product image"/>
+                <div class="book-text">
+                    <h3>Brie Mine 4Ever</h3>
+                    <p>An essential guide to the delicious and diverse world of cheese for enthusiasts of all levels.</p>
+                    <button onclick="addToCart('Brie Mine 4Ever')">Add to cart</button>
+                </div>
+            </div>
+            <div class="book">
+                <img class="image-book" src="./assets/Client3_Book2.png" alt="product image"/>
+                <div class="book-text">
+                <h3>Glory Riders</h3>
+                <p>A book exploring the thrilling world of motorcycle culture, community, and the open road.</p>
+                <button onclick="addToCart('Glory Riders')">Add to cart</button>
+                </div>
+            </div>
+            <div class="book">
+                <img class="image-book" src="./assets/Client3_Book3.png" alt="product image"/>
+                <div class="book-text">
+                <h3>Sorcerer’s Shadowed Chronicles</h3>
+                <p>A tale of forbidden magic and ancient secrets that intertwine to determine the fate of a shadowed world.</p>
+                <button onclick="addToCart('Sorcerer’s Shadowed Chronicles')">Add to cart</button>
+            </div>
+            </div>
+            <div class="book">
+                <img class="image-book" src="./assets/Client3_Magazine1.png" alt="product image"/>
+                <div class="book-text">
+                <h3>Ballc</h3>
+                <p>A magazine about pickleball</p>
+                <button onclick="addToCart('A magazine about pickleball')">Add to cart</button>
+            </div>
+            </div>
+            <div class="book">
+                <img class="image-book" src="./assets/Client3_Magazine2.png" alt="product image"/>
+                <div class="book-text">
+                <h3>Travel</h3>
+                <p>Your passport to adventure, inspiring journeys and exploring the world's wonders..</p>
+                <button onclick="addToCart('Travel')">Add to cart</button>
+            </div>
+            </div>
+                <div class="book">
+                    <img class="image-book" src="./assets/Client3_Magazine3.png" alt="product image"/>
+                    <div class="book-text">
+                    <h3>Eat</h3>
+                    <p>Your essential guide to the delicious world of food, from recipes and restaurants to culinary trends.</p>
+                    <button onclick="addToCart('Eat')">Add to cart</button>
+                </div>
+                </div>
+            </div>
+        <button onclick="viewCart()">View shopping cart</button>
         </section>
     </main>
 
     <footer>
-        <section>
-            <a href="home.html">Home</a>
-            <a href="gallery.html">Gallery</a>
-            <div>
-                <a href="https://www.facebook.com/"><img src="./assets/facebook-50.png" alt="facebook logo"/></a>
-                <a href="https://x.com/"><img src="./assets/instagram-50.png" alt="instagram logo"/></a>
-                <a href="https://www.instagram.com/"><img src="./assets/x-60.png" alt="x logo"/></a>
-                <a href="https://www.youtube.com/"><img src="./assets/youtube-50.png" alt="youtube logo"/></a>
+        <section class="first-footer-section">
+            <a role="button" href="home.html">Home</a>
+            <a role="button" href="gallery.html">Gallery</a>
+            <div class="social-media-container">
+                <a role="button" href="https://www.facebook.com/"><img class="social-media-logo" src="./assets/facebook-50.png" alt="facebook logo"/></a>
+                <a role="button" href="https://x.com/"><img class="social-media-logo" src="./assets/instagram-50.png" alt="instagram logo"/></a>
+                <a role="button" href="https://www.instagram.com/"><img class="social-media-logo" src="./assets/x-60.png" alt="x logo"/></a>
+                <a role="button" href="https://www.youtube.com/"><img class="social-media-logo" src="./assets/youtube-50.png" alt="youtube logo"/></a>
             </div>
-            <a href="about.html">About us</a>
-            <a href="custom.html">Custom</a>
+            <a role="button" href="about.html">About us</a>
+            <a role="button" href="custom.html">Custom</a>
         </section>
-        <section>
+        <section class="second-footer-section">
             <h3>Sign up for our newsletter</h3>
-            <form>
-                <input type="text"/>
-                <input type="submit" value="Suscribe">
-            </form> 
+            <form class="footer-form">
+                <input type="text" required/>
+                <input onclick="subscribe()" class="submit-button" type="submit" value="Suscribe">
+              </form> 
         </section>
     </footer>
-
+<script src="./script.js"></script>
     
 </body>
 </html>

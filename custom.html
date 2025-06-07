@@ -9,37 +9,40 @@
 <body>
 
     <header>
-        <div>
-            <img src="./assets/Logo.png" alt="Book store logo" width="200" />
-            <div>
-                <a href="home.html">Home</a>
-                <a href="gallery.html">Gallery</a>
-                <a href="about.html">About us</a>
-                <a href="custom.html">Custom</a>
+        <div class="header">
+            <div class="logo">
+            <img class="logo-image"  src="./assets/Logo.png" alt="Book store logo" width="100" />
             </div>
-            <h1>
-                Book Haven Bookstore
+            <div class="links">
+                <a role="button" href="home.html">Home</a>
+                <a role="button" href="gallery.html">Gallery</a>
+                <a role="button" href="about.html">About us</a>
+                <div class="marker">You are currently on </div>
+                <a  role="button" href="custom.html">Custom</a>
+            </div>
+            <h1 class="title">
+                Custom
             </h1>
         </div>
     </header>
 
     <main>
-        <section>
+        <section class="community-section">
             <h2>Community involvement</h2>
-            <div>
-            <div>
+            <div class="community-events">
+            <div class="event">
                 <h3>Local events</h3>
                 <p>Our bookstore actively engages the community by hosting local author events, facilitating diverse book clubs, and partnering with schools for literacy programs, making us a vibrant hub for readers and neighbors alike.</p>
             </div>
-            <div>
+            <div class="event">
                 <h3>Children storytime</h3>
                 <p>Join us every wednesday for Story Time Adventures! We'll share delightful tales, sing songs, and spark young imaginations with interactive fun. Perfect for our littlest readers aged 4-8 and their families! Free to attend, no registration needed.</p>
             </div>
             </div>
         </section>
-        <section>
+        <section class="customer-section">
             <h2>Customer spotlight</h2>
-            <div>
+            <div class="customer-container">
                 <div>
                     <h3>Joe Bob</h3>
                     <p>Absolutely love Book Haven Bookstore! Their staff is always so friendly and knowledgeable, and I always find something new to love. It's my perfect little escape from the everyday.</p>
@@ -55,7 +58,7 @@
                  
             </div>
         </section>
-        <section>
+        <section class="events-information">
             <div>
                 <h2>Events and collaborations</h2>
                 <p>More than just shelves of books, Book Haven Bookstore is a vibrant community hub. Our diverse events—from author readings and engaging workshops to beloved children's story times—offer something for everyone. We also actively build our community through collaborations with local schools, libraries, and businesses, fostering literacy and enriching cultural experiences.</p>
@@ -64,25 +67,26 @@
     </main>
 
     <footer>
-        <section>
-            <a href="home.html">Home</a>
-            <a href="gallery.html">Gallery</a>
-            <div>
-                <a href="https://www.facebook.com/"><img src="./assets/facebook-50.png" alt="facebook logo"/></a>
-                <a href="https://x.com/"><img src="./assets/instagram-50.png" alt="instagram logo"/></a>
-                <a href="https://www.instagram.com/"><img src="./assets/x-60.png" alt="x logo"/></a>
-                <a href="https://www.youtube.com/"><img src="./assets/youtube-50.png" alt="youtube logo"/></a>
+        <section class="first-footer-section">
+            <a role="button" href="home.html">Home</a>
+            <a role="button" href="gallery.html">Gallery</a>
+            <div class="social-media-container">
+                <a role="button" href="https://www.facebook.com/"><img class="social-media-logo" src="./assets/facebook-50.png" alt="facebook logo"/></a>
+                <a role="button" href="https://x.com/"><img class="social-media-logo" src="./assets/instagram-50.png" alt="instagram logo"/></a>
+                <a role="button" href="https://www.instagram.com/"><img class="social-media-logo" src="./assets/x-60.png" alt="x logo"/></a>
+                <a role="button" href="https://www.youtube.com/"><img class="social-media-logo" src="./assets/youtube-50.png" alt="youtube logo"/></a>
             </div>
-            <a href="about.html">About us</a>
-            <a href="custom.html">Custom</a>
+            <a role="button" href="about.html">About us</a>
+            <a role="button" href="custom.html">Custom</a>
         </section>
-        <section>
+        <section class="second-footer-section">
             <h3>Sign up for our newsletter</h3>
-            <form>
-                <input type="text"/>
-                <input type="submit" value="Suscribe">
+            <form class="footer-form">
+                <input type="text" required/>
+                <input onclick="subscribe()" class="submit-button" type="submit" value="Suscribe">
               </form> 
         </section>
     </footer>
+    <script src="./script.js"></script>
 </body>
 </html>
